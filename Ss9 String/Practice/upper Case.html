@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check Case</title>
+</head>
+<body>
+    <script>
+        let regexp = /^[A-Z]/;
+        function inputString() {
+            let str = prompt('input a String');
+            return str
+        }
+        function isFirstLetterUpperCase(str) {
+            regexp = /^[A-Z]/;
+            if(regexp.test(str)) {
+                document.write('First character is Upper Case');
+            } else {
+                document.write('First character is NOT Upper Case')
+            }
+        }
+
+        function callFuntion() {
+            let str = inputString();
+            let result = isFirstLetterUpperCase(str);
+        }
+        callFuntion();
+    </script>
+</body>
+</html>

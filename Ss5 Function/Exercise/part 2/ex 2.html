@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pi = 3.14;
+        function radiusCircle() {
+            let r = parseFloat(prompt("Input radius"));
+            return r;
+        }
+        function perimeterCircle(r) {
+            let C = (r*2)*pi;
+            return C;
+        }
+        function areaCircle(r) {
+            let S = (r*r)*pi;
+            return S;
+        }
+        function result() {
+            let r = radiusCircle();
+            let C = perimeterCircle(r);
+            let S = areaCircle(r);
+            document.write("Perimeter of Circle is :" + C + "<br>");
+            document.write('Area of circle is ' + S);
+        }
+        result();
+    </script>
+</body>
+</html>

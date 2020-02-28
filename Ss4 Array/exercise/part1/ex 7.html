@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let num = parseInt(prompt('Nhập 10 số nguyên'));
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let V = parseInt(prompt('Input a number to check'));
+    let count =0;
+    for (let i = 0; i < arr.length ; i++) {
+        arr[i] = i + 1;
+    }   document.write("string of numbers: " + arr + "<br>");
+
+    for (i = 0 ; i < arr.length ; i++) {
+        if (arr[i] === V) { 
+            for (let j = i ; j < arr.length-1  ; j++) {
+                arr[j] = arr[j + 1];
+   
+            } 
+            arr[(arr.length -1)] = 0;
+        }       
+        
+    }   document.write(arr);
+    </script>
+</body>
+</html>

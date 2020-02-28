@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sizeNum() {
+            let s = parseInt(prompt('Input size of Array'));
+            return s;
+        }
+
+        function createArray(s) {
+            let arr = new Array();
+            for (let i = 0 ; i < s ; i++) {
+                arr[i] = +prompt('Please input number ' + (i+1) + ' in array');
+                
+            } return arr;
+        }
+        function reverseArray(s,array) {
+            let result = array.reverse();
+            return result;
+            
+        }
+        function main() {
+            let s = sizeNum();
+            let array = createArray(s);
+            let result = reverseArray(s,array);
+            document.write('the array after reverse : ' + result);
+        }
+        main();
+
+    </script>
+</body>
+</html>

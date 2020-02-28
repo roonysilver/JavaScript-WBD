@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function input1() {
+            a = parseInt(prompt('input 1st number'));
+            return a;
+        }
+        
+        function input2(){
+            b = parseInt(prompt('input 2nd number'));
+            return b;
+        }
+
+        function swap(a,b) {
+            document.write('before swaping , 1st number is: ' + a + " and 2nd number is: " + b + "<br>");
+            let temp = a;
+            a = b;
+            b = temp;
+            document.write('after swaping , 1st number is: ' + a + " and 2nd number is: " + b)
+        }
+
+        function main() {
+            let a = input1();
+            let b = input2();
+            let display = swap(a,b);
+        }
+        main();
+    </script>
+</body>
+</html>

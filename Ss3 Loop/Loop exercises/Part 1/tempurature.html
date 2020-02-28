@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let tem = parseInt(prompt('Input temper: '));
+    do {
+        if ( tem < 20) {
+            tem = prompt('Please input higher')
+        } else if ( tem > 100) {
+            tem = prompt('Please input lower');
+        }
+    } while (tem < 20 || tem > 100 );
+    document.write('The temperature is' + tem);
+
+    </script>
+</body>
+</html>

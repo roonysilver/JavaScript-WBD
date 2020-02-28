@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài thi 2</title>
+</head>
+
+<body>
+    <script>
+
+        function inputLength() {
+            do {
+                length = (prompt("input length of array"))
+            } while (
+                isNaN(length) || length < 0 || parseInt(length) != length
+            )
+            return length;
+        }
+
+        function inputArray(length) {
+            arr = [];
+            for (i = 0; i < length; i++) {
+                arr[i] = parseInt(prompt('Input element in index [' + i + '] in array'));
+            }
+            return arr;
+        }
+
+        function tryAddFromArray() {
+            let index = parseInt(prompt("input index array"));
+
+            if (isNaN(index) || index < 0 || index > length - 1) {
+
+            }
+
+            return index;
+        }
+        function inputValue() {
+            let value = prompt("Input a value");
+            return value;
+        }
+
+        function checkIndex(arr, index, value) {
+            arr2 = [];
+            for (i = 0; i < index; i++) {
+                arr2[i] = arr[i];
+            }
+            for (let j = index + 1; j <= arr.length; j++) {
+                arr2[j] = arr[j - 1];
+            }
+            arr2[index] = value;
+        }
+
+
+
+
+        function callFuntion() {
+            length = inputLength();
+            arr = inputArray(length);
+            document.write('array you input: ' + arr + "<br>");
+            index = tryAddFromArray();
+            value = inputValue();
+            result = checkIndex(arr, index, value);
+            document.write('array after changed: ' + arr2);
+        }
+        callFuntion();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài thi 3</title>
+</head>
+
+<body>
+    <script>
+        function inputNum() {
+            do {
+                num = prompt("input a number")
+            } while (
+                isNaN(num) || num <= 0 || parseInt(num) != num
+            )
+            return num;
+        }
+
+        function isPerfectNumber(num) {
+            let sum = 0;
+            let perfectNum = false;
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i == 0) {
+                    sum += i;
+                }
+            }
+            if(sum == num) {
+                perfectNum = true;
+            }
+            return perfectNum;
+        }
+        function display(perfectNum) {
+            if (perfectNum) {
+                alert('True');
+            } else {
+                alert('False')
+            }
+        }
+
+        function result() {
+            let num = inputNum();
+            let perfectNum = isPerfectNumber(num);
+            let result = display(perfectNum)
+        }
+        result();
+    </script>
+</body>
+
+</html>

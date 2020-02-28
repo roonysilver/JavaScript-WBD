@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num = parseInt(prompt('input a number'));
+    let arr = new Array(num);
+    let arr1= new Array ();
+    for (let x = 0 ; x < num ; x++) {
+        arr[x] = Math.floor(Math.random()*30);
+        if (arr[x] > 10) {
+            arr1.push(arr[x]);
+        }
+        }
+        document.write(arr+'<br>');
+        document.write(arr1);
+    </script>
+</body>
+</html>

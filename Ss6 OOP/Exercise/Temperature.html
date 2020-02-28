@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tempurature(Celsius) {
+            this.Celsius = Celsius;
+            this.getCeltus = function() {
+                while (Celsius < -273.15 ) {
+                    Celsius = +prompt('input higher temperature');
+                }
+                    document.write('Temperature you input :'+ Celsius+ "<br>");
+                return Celsius;
+                }
+            this.getFahrenheit = function() {
+                return (Celsius*1.8)+32;
+            }
+            this.getKenvin = function() {
+                return Celsius+273.15;
+            }
+        }
+
+        let Celsius = parseInt(prompt('input Celsius'));
+        let temp = new tempurature(Celsius);
+        let celsius = temp.getCeltus();
+        let fahrenheit = temp.getFahrenheit();
+        let kenvin = temp.getKenvin();
+        document.write('Fahrenheit is : ' + fahrenheit + "<br>");
+        document.write('Kenvin is : ' + kenvin + "<br>");
+
+    </script>
+</body>
+</html>

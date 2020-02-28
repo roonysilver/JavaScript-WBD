@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function fibonacci(num) {
+    if (num == 0) return 0;
+    if (num <= 1) return 1;
+    return fibonacci(num - 1) + fibonacci(num - 2);
+}
+    let sum = 0 ;
+    for(let i=0;i<20;i++){
+        document.write(fibonacci(i) + " " +'<br>');
+        sum +=fibonacci(i);
+    } document.write('sum of 20 number is: '+sum);
+    </script>
+</body>
+</html>

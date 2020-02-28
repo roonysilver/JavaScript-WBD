@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num = parseInt(prompt('Input a string of number'));
+    let arr = [num];
+        for(let i = 0; i < num; i++){
+            arr[i]= Math.floor(Math.random()*100);
+        }
+    let max = arr[0] 
+        for (let i = 0; i < num ; i++) {
+            if(arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        document.write(arr + "<br>") ;
+        document.write(max + "<br>");
+    let sum = 0;
+    for (let i = 0 ; i < num ; i++) {
+        sum += arr[i]
+    }document.write('Average :'+sum/num);
+    </script>
+</body>
+</html>

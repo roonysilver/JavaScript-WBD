@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="submit" id="power" onclick="power()" value="power">
+    <br>
+    <br>
+    <input type="submit" id="1" onclick="1()" value="1">
+    <input type="submit" id="2" onclick="2()" value="2">
+    <input type="submit" id="3" onclick="3()" value="3">
+    <br>
+    <br>
+    <input type="submit" id="4" onclick="4()" value="4">
+    <input type="submit" id="5" onclick="5()" value="5">
+    <input type="submit" id="6" onclick="6()" value="6">
+    <br>
+    <br>
+    <input type="submit" id="7" onclick="7()" value="7">
+    <input type="submit" id="8" onclick="8()" value="8">
+    <input type="submit" id="9" onclick="9()" value="9">
+    <br>
+    <input type="submit" id="0" onclick="0()" value="0">
+    <br>
+    <br>
+    <input type="submit" id="volume+" onclick="up()" value="volume +">
+    <br>
+    <br>
+    <input type="submit" id="volume-" onclick="down()" value="volume -">
+    <script>
+        class Remote {
+            constructor(n, c, v, p) {
+                this.name = n
+                this.channel = c
+                this.volume = v
+                this.power = p
+            }
+            changeChannel(c) {
+                return this.channel;
+            } 
+            changeVolume(v) {
+                return this.volume
+            }
+            powerButton(p) {
+                return this.power
+            }
+        }
+
+        class Tivi extends Remote {
+            constructor(n,c,v,p) {
+                super(n , c, v, p)
+
+            }
+        }   
+    </script>
+</body>
+</html>

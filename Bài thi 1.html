@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài thi 1</title>
+</head>
+
+<body>
+    <script>
+        function inputSize() {
+            do {
+                size = (prompt("input length of array"))
+            } while (
+                isNaN(size) || size < 0 || parseInt(size) != size
+            )
+            return size;
+        }
+        function inputArray(size) {
+            let arr = [];
+            for (let i = 0; i < size; i++) {
+                arr[i] = Math.floor(Math.random() * 100)+1;
+            }
+            return arr
+        }
+        function findMax(size, arr) {
+            let max = arr[0]
+            for (let i = 0; i < size; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        function callFuntion() {
+            let size = inputSize();
+            let arr = inputArray(size);
+            let max = findMax(size, arr)
+            document.write('array: ' + arr + '<br>');
+            document.write('the max number in array: ' + max + "<br>");
+        }
+        callFuntion();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Build Circle</title>
+</head>
+<body>
+    <script>
+        let Circle = function(radius) {
+
+        this.radius = radius;
+
+        this.getRadius = function() {
+        return radius;
+        }
+
+        this.getArea = function() {
+        return Math.PI * radius * radius;
+        }
+        
+    };
+
+        let circle = new Circle(2);
+        let radius = circle.getRadius(); 
+        let area = circle.getArea();
+        document.write("radius: " + radius + " ; area: " + area + "<br>");
+
+        let circle2 = new Circle(10);
+        let radius2 = circle2.getRadius(); 
+        let area2 = circle2.getArea();
+        document.write("radius: " + radius2 + " ; area: " + area2);
+    </script>
+</body>
+</html>

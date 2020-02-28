@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bài thi 4</title>
+</head>
+
+<body>
+    <img style="display:none" id="img" width="200" height="100" src="wolf.png" />
+    <canvas id="canvas" width="800px" height="500px" style="border: 3px solid rgb(134, 44, 44);"></canvas>
+    <script>
+        class Animal {
+            constructor(x, y, width, height, image) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.image = image;
+            }
+            render(canvas) {
+                canvas.drawImage(this.x, this.y, this.width, this.height, this.image);
+            }
+        }
+        let imgAnimal = new Image();
+        imgAnimal.src = document.getElementById("img").src;
+        let canvas = document.getElementById("canvas").getContext("2d");
+        window.onload = function () {
+            let animal = new Animal(imgAnimal, 50, 50, 200, 100);
+            animal.render(canvas);
+        };
+    </script>
+</body>
+
+</html>

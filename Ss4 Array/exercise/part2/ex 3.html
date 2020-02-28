@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let num =  prompt('How many character you want to put?');
+    let arr = [num];
+    for (i = 0 ; i < num ; i++) {
+        arr[i] = prompt('Input character');
+        }
+        document.write("Array is: "+arr + "<br>");
+         let n = 0;
+        for (i = 0; i < num ; i++) {
+            if (arr[i]%arr[i] === 0) {
+                n++;
+            } 
+        } document.write('Number character in array is: '+ n);
+        // if (arr1 !== isNaN ) {
+        // document.write(arr1);
+    // }
+    </script>
+</body>
+</html>

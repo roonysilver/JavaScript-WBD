@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch-Case</title>
+</head>
+<body>
+<form action="">
+    <h2>Tính số ngày trong tháng</h2> <br>
+    <td>Nhập tháng</td>  <br>
+    <input id="month" type="text" name="tháng">
+    <button type="button" onclick="day()">Tính số ngày</button> <br>
+    <div id="Input"></div>
+</form>
+    <script>
+    function day() {
+        let day = parseFloat(document.getElementById('month').value);
+        if (day >= 1 && day <=12) {
+            switch (day) {
+                case 1 :
+                case 3 :
+                case 5 :
+                case 7 :
+                case 8 :
+                case 10:
+                case 12:
+                document.getElementById("Input").innerHTML="Có 31 ngày";
+                break;
+                case 4 :
+                case 6 :
+                case 9 :
+                case 11:
+                document.getElementById('Input').innerHTML="Có 30 ngày";
+                break;
+                case 2 :
+                document.getElementById('Input').innerHTML="Có 28 hoặc 29 ngày";
+            }
+        } else {
+            alert('Tầm bậy');
+        }
+    }
+    </script>
+</body>
+</html>

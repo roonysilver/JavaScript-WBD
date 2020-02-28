@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table width="70%">
+        <h2>Từ điển Anh - Việt</h2>
+        <td>
+            <input id="input" type="text">
+        </td>
+        <td>
+            <select name="Language" id="From">
+                <option value="ANH">Tiếng Anh</option>
+                <option value="VIET">Tiếng Việt</option>
+            </select>
+        </td>
+        <td>
+            <select name="Language" id="To">
+                <option value="VIET">Tiếng Việt</option>
+                <option value="ANH">Tiếng Anh</option>
+            </select>
+        </td>
+    </table>
+    <input type="button" id="btn" value="Translate" onclick="trans()">
+    Kết quả:<div id="result"></div>
+    <script>
+
+
+        function transer(x,arr1,arr2){
+            var flag = false;
+            for ( let i in arr1 ){
+                if(x === arr1[i]){
+                    flag = true;
+                    document.getElementById('result').innerHTML = arr2[i];
+                }
+            }
+            if(flag==false){
+                alert("ko tìm thấy");
+            }
+        }
+    
+
+        function trans() {
+
+            let EN = ['me', 'you', 'I', 'go', 'stay', 'kiss', 'drink', 'mother', 'father', 'brother', 'sister', 'parent'];
+            let VN = ['tôi', 'bạn', 'Tôi', 'đi', 'ở lại', 'hôn', 'uống', 'mẹ', 'bố', 'anh', 'chị', 'phụ huynh'];
+            var a = document.getElementById('input').value;
+
+            From_To = From.value + '_' + To.value;
+            switch (From_To) {
+                case "ANH_VIET":
+                    transer(a,EN,VN);
+                    break;
+                case "VIET_VIET":
+                case "ANH_ANH":
+                    alert('dịch đéo cùng tiếng');
+                    break;
+                case "VIET_ANH":
+                    transer(a,VN,EN);
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

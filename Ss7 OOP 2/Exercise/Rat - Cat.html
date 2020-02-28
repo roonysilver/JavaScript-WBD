@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Mouse(name , weight) {
+            this.name = name;
+            this.weight = weight;
+            this.decrease = function () {
+                this.weight -= weight;
+            }
+            this.setWeight = function (w) {
+                this.weight = w
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+            this.setSpeed = function (s) {
+                this.speed = s
+            }
+            this.getSpeed = function () {
+                return this.speed;
+            }
+            this.status = function () {
+                return this.weight > 0;
+
+            }
+            this.setsay = function (n) {
+                this.say = n
+            }
+        }
+        function Cat(name, weight) {
+            this.name = name;
+            this.weight = weight;
+            this.setWeight = function (w) {
+                    this.weight = w
+            }
+            this.getWeight = function () {
+                    return this.weight;
+            }
+            this.setSpeed = function (s) {
+                    this.speed = s
+            }
+            this.getSpeed = function () {
+                    return this.speed;
+            }
+                
+            this.eat = function (Mouse) {
+                if(Mouse.weight > 0) {
+                    if (this.getSpeed() > Mouse.getSpeed()) {
+                        return this.weight += Mouse.weight;
+                    } else {
+                        alert('Miss');
+                    }
+                } else {
+                    alert('The rat is dead');
+                }
+                 
+            }
+            this.setsay = function (n) {
+                this.say = n
+            }
+        }
+        let mouse = new Mouse ("Jerry",10);
+        mouse.setSpeed(10)
+        let cat = new Cat ('Tom', 20);
+        cat.setSpeed(20)
+        cat.eat(mouse);
+        document.write(cat.name + ' increase to ' + cat.getWeight())
+
+    </script>
+</body>
+
+</html>

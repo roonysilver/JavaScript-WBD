@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adam and Eva</title>
+</head>
+<body>
+    <tr>
+        <td>
+            <p id="adam"></p>
+            <p id="adamWeight"></p>
+        </td>
+        <td>
+            <p id="eva"></p>
+            <p id="evaWeight"></p>
+        </td>
+        <td>
+            <p id="appleWeight"></p>
+            <p id="weightRemain"></p>
+        </td>
+    </tr>
+    <tr>
+        <input type="submit" name="" id="adameat" onclick="adameat()" value="adam eat">
+        <input type="submit" name="" id="evaeat" onclick="evaeat()" value="eva eat">
+    </tr>
+    <script>
+        let Apple = function(weight) {
+            this.weight = weight;
+            this.decreaseWeight = function(){
+                return  this.weight -= 1;
+                 
+            }
+        }
+        let Human = function(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+            this.isMale = function() {
+                if (this.gender) {
+                    return "male";
+                } else {
+                    return "female";
+                }
+            };
+            this.checkApple = function(){
+                return Apple.weight
+            }
+            this.eat = function() {
+                this.weight +=1;
+                return this.weight
+            }
+            this.say = function () {
+                return console.log(this.name + " what a crap apple!!");
+            }
+            this.humanWeight = function() {
+                return this.weight
+            }
+        };
+
+        let adam = new Human("Adam", true, 90);
+       document.getElementById('adam').innerHTML =( "name: " + adam.name + "<br>" + "gender " + adam.isMale() + "<br>");
+       document.getElementById('adamWeight').innerHTML = ("weight is :" + adam.humanWeight()+ "<br>");
+
+        let eva = new Human("Eva", false, 120);
+        document.getElementById('eva').innerHTML= ('name: '+ eva.name + "<br>" + "gender " + eva.isMale() +"<br>");
+        document.getElementById('evaWeight').innerHTML= ('weight is : ' + eva.humanWeight()+ "<br>" );
+
+        let apple = new Apple(10);
+        document.getElementById("weightRemain").innerHTML = ('Weight apple remain ' + apple.weight)
+
+
+        function adameat() {
+            if (apple.weight > 0) {
+                adam.eat();
+                apple.decreaseWeight();
+                document.getElementById('adamWeight').innerHTML= "Weight :" + adam.humanWeight() ;
+                document.getElementById('weightRemain').innerHTML= ('Apple remain : ' + apple.weight + "<br>" );
+                adam.say();
+            } else {
+                alert('Stopppp!!!!! you eat like pig.');
+            }
+        };
+
+        function evaeat() {
+            if (apple.weight > 0) {
+                eva.eat();
+                apple.decreaseWeight();
+                document.getElementById('evaWeight').innerHTML= "Weight :" + eva.humanWeight() ;
+                document.getElementById('weightRemain').innerHTML= ('Apple remain : ' + apple.weight + "<br>" );
+                eva.say();               
+            } else {
+                alert('Stopppp!!!!! you eat like elephant.');
+            }
+        }
+        </script>
+</body>
+</html>
