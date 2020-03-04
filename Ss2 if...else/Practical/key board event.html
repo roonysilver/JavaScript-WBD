@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>songoku</title>
+</head>
+<body onload="docReady()">
+    <img id="songoku" src="Songoku-age-23-Dragon-Ball.jpg" style="position: absolute; left:0;top:0;" height="500" width="250">
+    <script>
+    function upArrowpressed() {
+        let element = document.getElementById("songoku");
+        element.style.top = parseInt(element.style.top) - 500 + 'px';
+    }
+    function downArrowpressed() {
+        let element = document.getElementById("songoku");
+        element.style.top = parseInt(element.style.top) + 500 + 'px';
+    }
+    function leftArrowpressed() {
+        let element = document.getElementById("songoku");
+        element.style.left = parseInt(element.style.left) - 500 + 'px';
+    }
+    function rightArrowpressed() {
+        let element = document.getElementById("songoku");
+        element.style.left = parseInt(element.style.left) + 500 + 'px';
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37: 
+                leftArrowpressed();
+                break;
+            case 39:
+                rightArrowpressed();
+                break;
+            case 38: 
+                upArrowpressed();
+                break;
+            case 40:
+                downArrowpressed();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+    </script>
+</body>
+</html>

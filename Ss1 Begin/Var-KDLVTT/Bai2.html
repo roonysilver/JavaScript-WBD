@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Điểm Số</title>
+</head>
+<body>
+    <script>
+        let inputPhysicalGrade;
+        let inputChemicalGrade;
+        let inputBiologicalGrade;
+        inputPhysicalGrade = prompt("Enter Physical Point");
+        inputChemicalGrade = prompt("Enter Chemical Point");
+        inputBiologicalGrade = prompt("Enter biological Point");
+        let Physical = parseFloat(inputPhysicalGrade);
+        let Chemical = parseFloat (inputChemicalGrade);
+        let biological = parseFloat (inputBiologicalGrade);
+        let Average = (Physical+Chemical+biological)/3;
+        let sum = Physical+Chemical+biological;
+        document.write('Sum point is:'+sum);
+        document.write('</br>');
+        document.write('Average point is:'+Average);
+        </script>
+</body>
+</html>
