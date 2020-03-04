@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <input id="a1" type="">
+    <input id="a2" type="">
+    <br>
+    <br>
+    <button type="button" onclick="add();">Addition(+)</button>
+    <button type="button" onclick="sub();">Subtraction(-)</button>
+    <button type="button" onclick="mul();">Multiplication(x)</button>
+    <button type="button" onclick="div();">Divition(/)</button>
+    <br>
+    <br>
+    <form id="Message" action=""></form>
+    <script>
+    function add() {
+        a1 = parseFloat(document.getElementById("a1").value);
+        a2 = parseFloat(document.getElementById("a2").value);
+        document.getElementById("Message").innerHTML="The result is:"+(a1+a2) ;
+
+    }
+
+    function sub() {
+        a1 = parseFloat(document.getElementById("a1").value);
+        a2 = parseFloat(document.getElementById("a2").value);
+        document.getElementById("Message").innerHTML="The result is:"+(a1-a2) ;
+
+    }
+
+    function mul() {
+        a1 = parseFloat(document.getElementById("a1").value);
+        a2 = parseFloat(document.getElementById("a2").value);
+        document.getElementById("Message").innerHTML="The result is:"+(a1*a2) ;
+
+    }
+
+    function div() {
+        a1 = parseFloat(document.getElementById("a1").value);
+        a2 = parseFloat(document.getElementById("a2").value);
+        document.getElementById("Message").innerHTML="The result is:"+(a1/a2) ;
+
+    }
+    </script>
+
+</body>
+</html>

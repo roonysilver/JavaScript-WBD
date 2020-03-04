@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tiền Tệ</title>
+</head>
+
+<body>
+    <table width='70%'>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <input id="input" name="Amount" type="text">
+            </td>
+
+            <td style="text-align: center">
+                <select id="currencyFrom">
+                    <option value="VN">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td style="text-align: center">
+                <select id="currencyTo">
+                    <option value="VN">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+
+            </td>
+            <td>
+                    <button onclick="convert()">
+                            <img src="convert-button.jpg" width="50"/>
+                        </button>
+            </td>
+        </tr>
+    </table>
+    <div id="Ketqua">Result:</div>
+    <script>
+        function convert(){
+            number = parseFloat(document.getElementById('input').value);
+            if(currencyFrom.value =='VN' && currencyTo.value =='USD'){
+                document.getElementById('Ketqua').innerHTML = number /24000 +"$";
+            }
+            if(currencyFrom.value =='USD' && currencyTo.value =='VN'){
+                document.getElementById('Ketqua').innerHTML = number *24000 +"VND";
+            }
+            if(currencyFrom.value =='USD' && currencyTo.value =='USD'){
+                document.getElementById('Ketqua').innerHTML = number +"$";
+            }
+            if(currencyFrom.value =='VN' && currencyTo.value =='VN'){
+                document.getElementById('Ketqua').innerHTML = number +"VND";
+            }
+        }
+    </script>
+</body>
+
+</html>
